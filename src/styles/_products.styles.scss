@@ -1,0 +1,57 @@
+@import "_main.scss";
+
+.custom-products-bar {
+  margin: 1rem 0;
+}
+
+.products {
+  display: grid;
+  grid-column-gap: 0.5rem;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  padding: 0 1rem;
+  overflow: hidden;
+  overflow-x: auto;
+  @include noscrollBar();
+  @include media(">=tablet") {
+    grid-template-columns: repeat(4, max-content);
+  }
+  &-bar {
+    margin: 1rem 0;
+  }
+}
+.slidebar {
+  @include media("<=tablet") {
+    width: 150px;
+    margin: 0 auto;
+    &-range {
+      appearance: none;
+      width: 100%;
+      height: 0.5rem;
+      border-radius: 0.5rem;
+      background-color: $light2;
+      outline: none;
+      opacity: 1;
+      &::-webkit-slider-thumb {
+        appearance: none;
+        width: 3rem;
+        height: 0.5rem;
+        border-radius: 0.5rem;
+        background: $dark3;
+        cursor: pointer;
+        position: relative;
+      }
+      &::-moz-range-thumb {
+        appearance: none;
+        width: 3rem;
+        height: 0.5rem;
+        border-radius: 0.5rem;
+        background: $dark3;
+        cursor: pointer;
+      }
+    }
+  }
+  @include media(">tablet") {
+    display: none;
+  }
+}

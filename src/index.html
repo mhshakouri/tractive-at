@@ -10,16 +10,38 @@
 
 <body>
     <header>
-        <h1>Tractive</h1>
+        <h1>Tractive Dev Task</h1>
     </header>
     <main>
-        <section class="products">
-            Products
-        </section>
+        <custom-products-bar>
+        </custom-products-bar>
     </main>
     <footer>
         <p>Some footer notes</p>
     </footer>
+
+    <template id="custom-product-template">
+        <li class="product">
+            <a href="#">
+                <span class="img-box">
+                    <img src="#" alt="">
+                </span>
+                <span class="text-box">
+                    <span class="name"></span>
+                    <span class="price"></span>
+                </span>
+            </a>
+            <button></button>
+        </li>
+    </template>
+    <template id="custom-products-bar-template">
+        <section class="custom-products-bar">
+            <ul class="products" id="productsPlaceholder"></ul>
+            <div class="slidebar">
+                <input type="range" min="1" max="100" value="0" class="slidebar-range" id="slidebarRange">
+            </div>
+        </section>
+    </template>
 </body>
 
 </html>
