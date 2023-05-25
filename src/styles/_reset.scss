@@ -105,3 +105,15 @@ input {
   -webkit-appearance: none;
   border-radius: 0;
 }
+
+a {
+  text-decoration: none;
+  color: $dark4;
+}
+
+button,
+input,
+select,
+option {
+  color: $dark4;
+}

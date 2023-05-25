@@ -1,0 +1,116 @@
+.products {
+  display: grid;
+  grid-column-gap: 0.5rem;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  padding: 0 1rem;
+  overflow: hidden;
+  overflow-x: auto;
+  @include noscrollBar();
+  &-bar {
+    margin: 1rem 0;
+  }
+}
+
+.product {
+  background-color: $light3;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  grid-row-gap: 1rem;
+  padding: 0.75rem;
+  @include media("<=tablet") {
+    max-width: calc((100vw - 3rem) / 2);
+    width: 100%;
+    min-width: 140px;
+  }
+  span {
+    display: block;
+  }
+  a {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    grid-row-gap: 1rem;
+    width: 100%;
+  }
+  .img-box {
+    max-width: 65%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin: 0 auto;
+  }
+  .text-box {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    grid-row-gap: 0.5rem;
+    .name {
+      color: $dark1;
+      font-size: 1rem;
+    }
+    .price {
+      color: $dark2;
+      font-size: 0.8rem;
+    }
+  }
+  img {
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    width: 100%;
+  }
+  button {
+    background-color: $accent;
+    color: $light1;
+    width: 100%;
+    padding: 0.5rem 0;
+    border-radius: 27px;
+  }
+}
+
+.slidebar {
+  @include media("<=tablet") {
+    width: 150px;
+    margin: 0 auto;
+    &-range {
+      appearance: none;
+      width: 100%;
+      height: 0.5rem;
+      border-radius: 0.5rem;
+      background-color: $light2;
+      outline: none;
+      opacity: 1;
+      &::-webkit-slider-thumb {
+        appearance: none;
+        width: 3rem;
+        height: 0.5rem;
+        border-radius: 0.5rem;
+        background: $dark3;
+        cursor: pointer;
+        position: relative;
+        &::beore {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 3rem;
+          height: 3rem;
+          transform: translate(-50%, -50%);
+          background-color: red;
+        }
+      }
+      &::-moz-range-thumb {
+        appearance: none;
+        width: 3rem;
+        height: 0.5rem;
+        border-radius: 0.5rem;
+        background: $dark3;
+        cursor: pointer;
+      }
+    }
+  }
+  @include media(">tablet") {
+    display: none;
+  }
+}

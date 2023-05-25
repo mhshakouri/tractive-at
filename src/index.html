@@ -10,75 +10,100 @@
 
 <body>
     <header>
-        <h1>Tractive</h1>
+        <h1>Tractive Dev Task</h1>
     </header>
     <main>
         <section class="products-bar">
             <ul class="products">
                 <li class="product">
                     <a href="#">
-                        <figure>
+                        <span class="img-box">
                             <img src="https://tractive.com/assets/image/shop-frontend/product/trnjaca/tractive-gps-dog-4-spare-charger.png"
                                 alt="Clip x3">
-                            <figcaption>
-                                <span class="product-name">Clip x4</span>
-                                <span class="product-price">€ 9.99</span>
-                            </figcaption>
-                        </figure>
+                        </span>
+                        <span class="text-box">
+                            <span class="name">Clip x4</span>
+                            <span class="price">€ 9.99</span>
+                        </span>
                     </a>
                     <button>Add to cart</button>
                 </li>
 
                 <li class="product">
                     <a href="#">
-                        <figure>
+                        <span class="img-box">
                             <img src="https://tractive.com/assets/image/shop-frontend/product/trnjaca/tractive-gps-dog-4-spare-charger.png"
                                 alt="Clip x3">
-                            <figcaption>
-                                <span class="name">Clip x3</span>
-                                <span class="price">€ 9.99</span>
-                            </figcaption>
-                        </figure>
+                        </span>
+                        <span class="text-box">
+                            <span class="name">Clip x4</span>
+                            <span class="price">€ 9.99</span>
+                        </span>
                     </a>
                     <button>Add to cart</button>
                 </li>
 
                 <li class="product">
                     <a href="#">
-                        <figure>
+                        <span class="img-box">
                             <img src="https://tractive.com/assets/image/shop-frontend/product/trnjaca/tractive-gps-dog-4-spare-charger.png"
                                 alt="Clip x3">
-                            <figcaption>
-                                <span class="name">Clip x3</span>
-                                <span class="price">€ 9.99</span>
-                            </figcaption>
-                        </figure>
+                        </span>
+                        <span class="text-box">
+                            <span class="name">Clip x4</span>
+                            <span class="price">€ 9.99</span>
+                        </span>
                     </a>
                     <button>Add to cart</button>
                 </li>
 
                 <li class="product">
                     <a href="#">
-                        <figure>
+                        <span class="img-box">
                             <img src="https://tractive.com/assets/image/shop-frontend/product/trnjaca/tractive-gps-dog-4-spare-charger.png"
                                 alt="Clip x3">
-                            <figcaption>
-                                <span class="name">Clip x3</span>
-                                <span class="price">€ 9.99</span>
-                            </figcaption>
-                        </figure>
+                        </span>
+                        <span class="text-box">
+                            <span class="name">Clip x4</span>
+                            <span class="price">€ 9.99</span>
+                        </span>
                     </a>
                     <button>Add to cart</button>
                 </li>
             </ul>
             <div class="slidebar">
-                <span class="sliderbar-handle"></span>
+                <input type="range" min="1" max="100" value="0" class="slidebar-range" id="slidebarRange">
             </div>
         </section>
     </main>
     <footer>
         <p>Some footer notes</p>
     </footer>
+
+    <!-- <template id="custom-product-template">
+        <li class="product">
+            <a href="#">
+                <span class="img-box">
+                    <slot name="product-image">Product image</slot>
+                </span>
+                <span class="text-box">
+                    <slot name="product-name" class="name">Product name</slot>
+                    <slot name="product-price" class="price">Product price</slot>
+                </span>
+            </a>
+            <button>
+                <slot name="product-cta-text">Product CTA Text</slot>
+            </button>
+        </li>
+    </template>
+    <template id="custom-products-bar-template">
+        <section class="custom-products-bar">
+            <slot name="products" class="products">Products</slot>
+            <div class="slidebar">
+                <input type="range" min="1" max="100" value="0" class="slidebar-range" id="slidebarRange">
+            </div>
+        </section>
+    </template> -->
 </body>
 
 </html>

@@ -1,0 +1,30 @@
+@mixin noscrollBar {
+  @include hidden-scrollbar;
+  -ms-overflow-style: none;
+  /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+
+  /* for Firefox */
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+    /* Mostly for vertical scrollbars */
+    height: 0;
+    /* Mostly for horizontal scrollbars */
+  }
+}
+
+@mixin hidden-scrollbar {
+  -ms-overflow-style: none;
+  /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+
+  /* for Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+    /* for Chrome, Safari, and Opera */
+  }
+}

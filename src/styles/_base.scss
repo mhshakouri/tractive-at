@@ -1,0 +1,49 @@
+:root {
+  font-size: 16px;
+}
+
+html,
+body {
+  font-family: $baseFontFamily;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  background-color: $dark2;
+  color: $light2;
+  padding: 0.5rem 1rem;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  background-color: $light2;
+  color: $dark2;
+  padding: 0.5rem 1rem;
+}
+
+button {
+  appearance: none;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  &:hover,
+  &:active {
+    appearance: none;
+    box-shadow: none;
+    outline: none;
+    border: none;
+  }
+}
