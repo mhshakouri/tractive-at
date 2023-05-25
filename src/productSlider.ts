@@ -92,6 +92,7 @@ customElements.define('custom-products-bar',
         connectedCallback() {
             this.productsList.addEventListener('scroll', this.productsListScrollEventHandler)
             this.sliderBarRangeInput.addEventListener('change', this.sliderBarInputChangeEventHandler)
+            this.sliderBarRangeInput.addEventListener('input', this.sliderBarInputChangeEventHandler)
         }
 
     }
