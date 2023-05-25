@@ -1,0 +1,15 @@
+.product {
+  background-color: $productsBg;
+  border-radius: 1rem;
+  img {
+    max-width: 100%;
+  }
+}
+
+.slidebar {
+  @include media("<=phone") {
+  }
+  @include media(">phone") {
+    display: none;
+  }
+}
