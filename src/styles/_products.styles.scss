@@ -1,5 +1,9 @@
 @import "_main.scss";
 
+.custom-products-bar {
+  margin: 1rem 0;
+}
+
 .products {
   display: grid;
   grid-column-gap: 0.5rem;
@@ -9,65 +13,11 @@
   overflow: hidden;
   overflow-x: auto;
   @include noscrollBar();
+  @include media(">=tablet") {
+    grid-template-columns: repeat(4, max-content);
+  }
   &-bar {
     margin: 1rem 0;
-  }
-}
-
-.product {
-  background-color: $light3;
-  border-radius: 1rem;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  grid-row-gap: 1rem;
-  padding: 0.75rem;
-  @include media("<=tablet") {
-    max-width: calc((100vw - 3rem) / 2);
-    width: 100%;
-    min-width: 140px;
-  }
-  span {
-    display: block;
-  }
-  a {
-    display: grid;
-    place-items: center;
-    text-align: center;
-    grid-row-gap: 1rem;
-    width: 100%;
-  }
-  .img-box {
-    max-width: 65%;
-    width: 100%;
-    aspect-ratio: 1/1;
-    margin: 0 auto;
-  }
-  .text-box {
-    display: grid;
-    place-items: center;
-    text-align: center;
-    grid-row-gap: 0.5rem;
-    .name {
-      color: $dark1;
-      font-size: 1rem;
-    }
-    .price {
-      color: $dark2;
-      font-size: 0.8rem;
-    }
-  }
-  img {
-    max-width: 100%;
-    aspect-ratio: 1/1;
-    width: 100%;
-  }
-  button {
-    background-color: $accent;
-    color: $light1;
-    width: 100%;
-    padding: 0.5rem 0;
-    border-radius: 27px;
   }
 }
 .slidebar {

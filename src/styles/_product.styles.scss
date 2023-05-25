@@ -1,0 +1,72 @@
+@import "_main.scss";
+
+.product {
+  background-color: $light3;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  grid-row-gap: 1rem;
+  padding: 0.75rem;
+  width: 100%;
+  min-width: 140px;
+  @include media("<=tablet") {
+    max-width: calc((100vw - 3rem) / 2);
+  }
+  @include media(">tablet") {
+    max-width: calc((100vw - 3.5rem) / 4);
+  }
+  span {
+    display: block;
+  }
+  a {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    grid-row-gap: 1rem;
+    width: 100%;
+  }
+  .img-box {
+    max-width: 65%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin: 0 auto;
+  }
+  .text-box {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    grid-row-gap: 0.5rem;
+    .name {
+      color: $dark1;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      display: block;
+      width: 100%;
+      @include clip-text-ellipsis();
+    }
+    .price {
+      color: $dark2;
+      font-size: 0.8rem;
+    }
+  }
+  img {
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    width: 100%;
+  }
+  button {
+    background-color: $accent;
+    color: $light1;
+    width: 100%;
+    padding: 0.5rem 0;
+    border-radius: 27px;
+    @include media(">tablet") {
+      transition: background-color 0.3s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        background-color: rgba($accent, 0.8);
+      }
+    }
+  }
+}
