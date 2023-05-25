@@ -28,3 +28,9 @@
     /* for Chrome, Safari, and Opera */
   }
 }
+
+@mixin clip-text-ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
